@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+:root {
+    --blue: rgb(24, 119, 242);
+    --black: rgb(0, 0, 0);
+    --red:rgb(207, 60, 63);
+    --background-color: rgb(249, 249, 249);
+    --input-background: rgb(237, 237, 237);
+    --checkbox-background: rgb(230, 230, 230);
+    --input-letters: rgb(178, 178, 178);
+    --footer-letters: rgb(156, 156, 156);
+}
+
+
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.login {
+    width: 30vw;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px;
+}
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 130px;
+    margin-bottom: 70px;
+}
+
+h1 {
+    color: var(--black);
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+[type="text"], button, [type=checkbox] {
+    border: none;
+    border-radius: 5px;
+}
+
+.textLabel {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+[type=text] {
+    color: black;
+    background-color: var(--input-background);
+    padding: 30px 10px 10px;
+    width: 350px;
+    font-weight: 600;
+
+    margin-top: 20px;
+}
+
+[type=text]:focus {
+    background-color: var(--background-color);
+}
+
+.input-span {
+    position: absolute;
+    cursor: text;
+    font-size: 12px;
+    color: var(--input-letters);
+    font-weight: 700;    
+    transition: all 0.3s;
+    padding: 40px 20px;
+}
+
+.selected {
+    padding: 30px 10px;
+}
+
+.button-wrapper {
+    display: flex;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.button-wrapper button {
+    flex: 1;
+    cursor: pointer;
+    height: 35px;
+}
+
+.button-wrapper .face-button {
+    background-color: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-wrapper .apple-button {
+    background-color: var(--black);
+}
+
+.button-wrapper img {
+    width: 20px;
+    height: 20px;
+}
+
+.button-wrapper .apple-button img {
+    height: 25px;
+}
+
+.button-wrapper button + button {
+    margin-left: 10px;
+}
+
+.checkbox-label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+[type=checkbox] {
+    background-color: var(--checkbox-background);
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    border-radius: 3px;
+}
+
+[type=checkbox]:checked {
+    background-color: var(--red);
+}
+
+[type=checkbox]:checked::after {
+    content: "";
+    display: block;
+    margin: 2px 5px;
+    width: 6px;
+    height: 10px;
+    border: solid 3px white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(40deg);
+}   
+
+.checkbox-label span {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+a {
+    color: var(--footer-letters);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.login-button {
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--input-background);
+    background-color: var(--background-color);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.login-button svg {
+    fill: var(--input-letters);
+}   
+
+.banner {
+    width: 70vw;
+    background-image: url("./assets/banner.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
